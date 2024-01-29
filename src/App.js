@@ -1,5 +1,5 @@
 import './App.css';
-import ZiZiPay from './components/ZiZiPay';
+import ZiZiPay from './ZiZiPay/components';
 
 const App =() =><ZiZiPay/>;
 

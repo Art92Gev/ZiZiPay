@@ -1,0 +1,50 @@
+.aparat {
+	width: 60%;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: .3rem;
+}
+
+.head-container {
+width: 85%;
+height: 70%;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #e9e5e5c4;
+border: 2px solid;
+
+}
+.body-container {
+	width: 80%;
+	height: 30%;
+	border-radius: 20px 20px 0 0;
+	background: #e9e5e5c4;
+	border: 2px solid;
+}
+
+.ekran {
+	width: 95%;
+	height: 95%;
+	border: 3rem solid black ;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	background-image: url(blurback.jpg);
+	background-repeat: no-repeat;
+	background-size: 110%;
+	overflow: hidden;
+}
+
+hr {
+	position: relative;
+	top: 40%;
+	border: 2px solid;
+}

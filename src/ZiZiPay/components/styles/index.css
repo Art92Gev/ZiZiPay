@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 	user-select: none;
 	/* border: 1px solid; */
+	transition: all .5s;
+	font-size: large;
 }
 
 .zizi-pay {

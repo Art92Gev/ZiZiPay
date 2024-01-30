@@ -39,7 +39,8 @@ border: 2px solid;
 	gap: 1.5rem;
 	background-image: url(blurback.jpg);
 	background-repeat: no-repeat;
-	background-size: 110%;
+	background-size: 250%;
+	background-position: center;
 	overflow: hidden;
 }
 

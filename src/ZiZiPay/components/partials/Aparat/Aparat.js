@@ -9,11 +9,12 @@ import Paypage from '../Paypage/Paypage'
 
 export default function Aparat() {
 	const element = useContext(Context)
+	
 
 	return (
 		<div className='aparat'>
 			<div className='head-container'>
-				<div className='ekran'>
+				<div className='ekran' style={{gap : element.gap }}>
 					<Header/>
 					{!element.paypage ? <Main/>  : <Paypage/>}
 					<Footer />

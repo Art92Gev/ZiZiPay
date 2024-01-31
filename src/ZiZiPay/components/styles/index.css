@@ -14,6 +14,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	background: #837f7fc0;
+	background-image: url(20230301_Bravo_YH_supermarket_at_Xingyang_Wuyue_Plaza.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
 }
 

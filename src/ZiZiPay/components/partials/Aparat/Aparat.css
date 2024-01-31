@@ -15,7 +15,7 @@ border-radius: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #e9e5e5c4;
+background: #e9e5e5;
 border: 2px solid;
 
 }
@@ -23,7 +23,7 @@ border: 2px solid;
 	width: 80%;
 	height: 30%;
 	border-radius: 20px 20px 0 0;
-	background: #e9e5e5c4;
+	background: #e9e5e5;
 	border: 2px solid;
 }
 

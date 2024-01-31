@@ -4,11 +4,14 @@ import Context from "./Context";
 import Aparat from './partials/Aparat/Aparat'
 
 function ZiZiPay () {
-	const [visible,setVisible] = useState('15vh')
+	const [visible,setVisible] = useState('block')
 	const [paypage,setPayPage] = useState(false)
+	const [gap,setGap] = useState('1.5rem')
+	let gaps;
   let element = {
 		paypage,setPayPage,
-		visible,setVisible
+		visible,setVisible,
+		gap,setGap
 	}	
 
 return(

@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 import Context from '../../Context';
 import { useContext } from 'react';
 import './Paypage.css';
+import img from '../images/3.jpg'
 
 export default function Paypage() {
   const element = useContext(Context);
-  const [inputValue, setInputValue] = useState(0);
+  const [inputValue, setInputValue] = useState('0');
+
+  const padnum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'Del', 'Pay'];
 
   const handleButtonClick = (value) => {
-    setInputValue((prevValue) => prevValue + value);
+    if (inputValue.length < 9) {
+      setInputValue((prevValue) => prevValue + value);
+    }
   };
 
   const handleXButtonClick = () => {
@@ -17,32 +22,36 @@ export default function Paypage() {
 
   return (
     <div className='paypage'>
+			<img src={img} alt="" />
+			<hr />
       <div className='button-pad'>
         <input
-          type="number"
+          type="text" 
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
         />
-        <button onClick={() => handleButtonClick('1')}>1</button>
-        <button onClick={() => handleButtonClick('2')}>2</button>
-        <button onClick={() => handleButtonClick('3')}>3</button>
-        <button onClick={() => handleButtonClick('4')}>4</button>
-        <button onClick={() => handleButtonClick('5')}>5</button>
-        <button onClick={() => handleButtonClick('6')}>6</button>
-        <button onClick={() => handleButtonClick('7')}>7</button>
-        <button onClick={() => handleButtonClick('8')}>8</button>
-        <button onClick={() => handleButtonClick('9')}>9</button>
-        <button>-</button>
-        <button onClick={() => handleButtonClick('0')}>0</button>
-        <button onClick={() =>  inputValue > 0 ?  handleXButtonClick('x') : ''}>del</button>
-				<button className='hastatel'>Accept</button>
+        {padnum.map((item, index) => (
+          <button key={index} onClick={() => {
+						if(item !== 'Del' && item !== 'Pay') {
+							handleButtonClick(item)
+						}
+						else if(inputValue.length > 1 && item !== 'Pay') {
+								handleXButtonClick()
+						}
+						}}>
+            {item}
+          </button>
+        ))}
       </div>
-      <button className='back' onClick={() => {
-        element.setVisible('15vh');
-        element.setPayPage(false);
-				console.log(element.visible);
-
-      }}>Back</button>
+      <button
+        className='back'
+        onClick={() => {
+          element.setVisible('block');
+          element.setPayPage(false);
+					element.setGap('1.5rem')
+        }}
+      >
+        Back
+      </button>
     </div>
   );
 }

@@ -17,7 +17,8 @@ export default function Main() {
 					<button key={index} onClick={()=> {
 						element.setVisible('none')
 						element.setPayPage(true)
-						console.log(element.visible);
+						element.setGap('0')
+						console.log(element.gaps);
 					}}>bye</button>
 				))}
 			</div>

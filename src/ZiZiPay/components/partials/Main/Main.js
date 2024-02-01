@@ -16,7 +16,7 @@ export default function Main() {
 				{main1.map((item,index)=> (
 					<button key={index} onClick={()=> {
 						element.setVisible('none')
-						element.setPayPage(true)
+						element.setPayPage(2)
 						element.setGap('0')
 						console.log(element.gaps);
 					}}>bye</button>

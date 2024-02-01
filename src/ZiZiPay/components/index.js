@@ -5,7 +5,7 @@ import Aparat from './partials/Aparat/Aparat'
 
 function ZiZiPay () {
 	const [visible,setVisible] = useState('block')
-	const [paypage,setPayPage] = useState(false)
+	const [paypage,setPayPage] = useState(1)
 	const [gap,setGap] = useState('1.5rem')
 	let gaps;
   let element = {

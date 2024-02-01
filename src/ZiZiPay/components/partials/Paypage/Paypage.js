@@ -46,7 +46,7 @@ export default function Paypage() {
         className='back'
         onClick={() => {
           element.setVisible('block');
-          element.setPayPage(false);
+          element.setPayPage(1);
 					element.setGap('1.5rem')
         }}
       >

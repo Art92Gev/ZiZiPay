@@ -7,11 +7,13 @@ function ZiZiPay () {
 	const [visible,setVisible] = useState('block')
 	const [paypage,setPayPage] = useState(1)
 	const [gap,setGap] = useState('1.5rem')
-	let gaps;
+	const [img,setImg] = useState()
+	let arrid = 0;
   let element = {
 		paypage,setPayPage,
 		visible,setVisible,
-		gap,setGap
+		gap,setGap,
+		img,setImg
 	}	
 
 return(

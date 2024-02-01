@@ -7,6 +7,21 @@ main {
 	align-items: center;
 	gap: 1.5rem;
 }
+.main-2>button {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main-1>button {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 18%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1rem;
+	gap: 5px;
+}
 
 .main-1{
 	width: 100%;

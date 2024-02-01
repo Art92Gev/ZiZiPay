@@ -1,30 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Main.css'
 import Context from '../../Context'
 import { useContext } from 'react'
-
+import { icons1 } from './../../constants/icons2'
+import { icons2 } from './../../constants/icons';
 
 export default function Main() {
 	const element = useContext(Context)
 
 
-	let main2 = [1,2,3,4,5,6,7,8,9,10,11,12]
-	let main1 = [1,2,3,4,5,6,7,8]
 	return (
 		<main>
 			<div className='main-1'>
-				{main1.map((item,index)=> (
-					<button key={index} onClick={()=> {
+				{icons1.map((item, index) => (
+					<button key={index} onClick={() => {
 						element.setVisible('none')
-						element.setPayPage(2)
 						element.setGap('0')
-						console.log(element.gaps);
-					}}>bye</button>
+						element.setPayPage(2)
+					}}>{item.icon}{item.name}</button>
 				))}
 			</div>
 			<div className='main-2'>
-				{main2.map((item,index) => (
-					<button key={index}>helo</button>
+				{icons2.map((item, index) => (
+					<button style={{ backgroundImage: `url(${item.icon})` }} key={index} onClick={() => {
+						element.setVisible('none');
+						element.setGap('0');
+						element.setPayPage(2);
+						element.setImg(item.icon)
+					}}></button>
 				))}
 			</div>
 		</main>

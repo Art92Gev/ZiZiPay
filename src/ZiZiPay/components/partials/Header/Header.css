@@ -6,23 +6,36 @@ header {
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	background: #000;
 }
+
+.icon-logo {
+	width: 17%;
+	height: 100%;
+	overflow: hidden;
+	background: white;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
 
 video {
 	width: 55%;
 	position: absolute;
+	top: 0;
 	left: -20%;
 }
 
 .header-right {
 	width: 83%;
 	height: 100%;
-	background: white;
-	position: absolute;
 	top: 0%;
 	left: 17%;
 	display: flex;
+	z-index: 1;
 }
 
 
@@ -41,13 +54,12 @@ video {
 	flex-direction: column;
 	color: rgb(18, 97, 18);
 	background: rgb(212, 209, 209);
-	font-size: 20px;
+}
+.hr-srch > svg {
+ font-size: 30px;
 }
 
 @media screen and (max-width: 1542px) {
-	.hr-srch>p {
-			display: none;
-	}
 	.aparat {
 		width: 100%;
 	}

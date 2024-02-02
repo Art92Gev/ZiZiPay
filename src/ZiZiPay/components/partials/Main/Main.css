@@ -10,9 +10,11 @@ main {
 .main-2>button {
 	background-repeat: no-repeat;
 	background-position: center;
+	border: none;
 }
 
 .main-1>button {
+	border: none;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 18%;
@@ -43,12 +45,12 @@ main {
 }
 
 .main-2>button {
-	width: 24%;
+	width: 23%;
 	height: 30%;
 }
 
 .main-1>button {
-	width: 24%;
+	width: 23%;
 	height: 50%;
 	border-radius: 5px;
 }

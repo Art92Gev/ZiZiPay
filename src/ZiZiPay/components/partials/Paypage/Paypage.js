@@ -25,7 +25,6 @@ export default function Paypage() {
 
 	return (
 		<div className='paypage'>
-			<img src={element.img} alt="" />
 			<img src={img} alt="" />
 			<hr />
 			<div className='button-pad'>
@@ -38,7 +37,7 @@ export default function Paypage() {
 					<button key={index} onClick={() => {
 						if (item !== 'Del' && item !== 'Pay') {
 							handleButtonClick(item)
-							console.log('element',element.arrid);
+							console.log('element', element.arrid);
 						}
 						else if (inputValue.length > 1 && item !== 'Pay') {
 							handleXButtonClick()
@@ -46,16 +45,13 @@ export default function Paypage() {
 						else if (item === 'Pay') {
 							data.map((item, index) => {
 								if (inputValue.includes(item.number)) {
-									alert('ok')
+									let a = index
+									console.log(a);
 								}
 								else {
 									alert('error')
-								}
-							}
-							)
-						}
+								}})}
 					}}>
-
 						{item}
 					</button>
 				))}
@@ -66,6 +62,7 @@ export default function Paypage() {
 					element.setVisible('block');
 					element.setPayPage(1);
 					element.setGap('1.5rem');
+					element.setImg()
 				}}
 			>
 				Back

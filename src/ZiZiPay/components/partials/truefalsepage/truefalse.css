@@ -1,0 +1,86 @@
+.paytrue {
+	width: 100%;
+	height: 200%;
+	display: flex;
+	background: #cdc8c8ae;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-info{
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.user-infoup {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.user-infoup h2 {
+	text-align: center;
+	border-bottom:2px solid rgba(60, 56, 56, 0.557);
+
+}
+
+.monet-in{
+	width: 40%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-left:2px solid rgba(60, 56, 56, 0.557);	
+	gap: 10px;
+}
+
+.monet-in h3 {
+	margin-bottom: 20px;
+}
+
+.monet-in h2 {
+	width: 90%;
+	font-size: 24px;
+	text-align: center;
+	border-bottom: 3px solid #789134;
+}
+
+.monet-in>p:nth-of-type(2){
+	width: 90%;
+	padding: 1rem;
+	background: grey;
+	text-align: center;
+	border-radius: 20px;
+	color: white;
+}
+
+.payfalse {
+	width: 100%;
+	height: 100vh;
+	background: rgb(114, 7, 191);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.payfalse svg {
+	font-size: 100px;
+	color: white;
+}
+
+.payfalse h2 {
+	font-size: 30px;
+	color: white;
+}

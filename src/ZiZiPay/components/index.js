@@ -7,6 +7,7 @@ function ZiZiPay() {
 	const [visible, setVisible] = useState('block')
 	const [paypage, setPayPage] = useState(1)
 	const [paypage1, setPayPage1] = useState(2)
+	const [getpayinfo,setGetPayInfo] = useState()
 	const [gap, setGap] = useState('1.5rem')
 	const [img, setImg] = useState()
 	let element = {
@@ -15,8 +16,8 @@ function ZiZiPay() {
 		visible, setVisible,
 		gap, setGap,
 		img, setImg,
+		getpayinfo,setGetPayInfo
 	}
-	console.log(img);
 
 	return (
 		<Context.Provider value={element}>

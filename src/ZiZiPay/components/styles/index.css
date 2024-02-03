@@ -5,6 +5,8 @@
 	user-select: none;
 	transition: all .03s;
 	font-size: large;
+	/* border: 1px solid; */
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .zizi-pay {

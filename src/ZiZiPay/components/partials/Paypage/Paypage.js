@@ -6,6 +6,7 @@ import img from '../images/3.jpg'
 import { data } from '../../constants/data';
 import { icons1 } from './../../constants/icons2'
 import { icons2 } from './../../constants/icons';
+import Backbtn from './Backbtn';
 
 export default function Paypage() {
 	const element = useContext(Context);
@@ -37,7 +38,6 @@ export default function Paypage() {
 					<button key={index} onClick={() => {
 						if (item !== 'Del' && item !== 'Pay') {
 							handleButtonClick(item)
-							console.log('element', element.arrid);
 						}
 						else if (inputValue.length > 1 && item !== 'Pay') {
 							handleXButtonClick()
@@ -45,28 +45,18 @@ export default function Paypage() {
 						else if (item === 'Pay') {
 							data.map((item, index) => {
 								if (inputValue.includes(item.number)) {
-									let a = index
-									console.log(a);
+									element.setGetPayInfo(element.getpayinfo)
+									element.setPayPage(3)
 								}
 								else {
-									alert('error')
+									element.setPayPage(4)
 								}})}
 					}}>
 						{item}
 					</button>
 				))}
 			</div>
-			<button
-				className='back'
-				onClick={() => {
-					element.setVisible('block');
-					element.setPayPage(1);
-					element.setGap('1.5rem');
-					element.setImg()
-				}}
-			>
-				Back
-			</button>
+			<Backbtn/>
 		</div>
 	);
 }

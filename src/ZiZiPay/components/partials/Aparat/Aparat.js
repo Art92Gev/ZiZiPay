@@ -6,6 +6,8 @@ import Footer from '../Footer/Footer'
 import Context from '../../Context'
 import { useContext } from 'react'
 import Paypage from '../Paypage/Paypage'
+import Paytrue from '../truefalsepage/Paytrue'
+import Payfalse from '../truefalsepage/Payfalse'
 
 export default function Aparat() {
 	const element = useContext(Context)
@@ -16,11 +18,10 @@ export default function Aparat() {
 			<div className='head-container'>
 				<div className='ekran' style={{ gap: element.gap }}>
 					<Header />
-					{element.paypage === 1 ? (
-						<Main />
-					) : element.paypage === 2 ? (
-						<Paypage />
-					):''}
+					{element.paypage === 1 ? (<Main />)
+						: element.paypage === 2 ? (<Paypage />)
+							: element.paypage === 3 ? (<Paytrue />)
+								: element.paypage === 4 ? (<Payfalse />) : null}
 					<Footer />
 				</div>
 			</div>

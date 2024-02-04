@@ -4,13 +4,13 @@ import { useContext } from 'react';
 import './Paypage.css';
 import img from '../images/3.jpg'
 import { data } from '../../constants/data';
-import { icons1 } from './../../constants/icons2'
+import { icons1 } from './../../constants/icons2';
 import { icons2 } from './../../constants/icons';
 import Backbtn from './Backbtn';
 
 export default function Paypage() {
 	const element = useContext(Context);
-	let random = Math.round(Math.random() * (5 * 1000 ))
+	const randoms = Math.round(Math.random() * (5 * 1000 ))
 	const padnum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'Del', 'Pay'];
 
 	const handleButtonClick = (value) => {
@@ -48,15 +48,14 @@ export default function Paypage() {
 									setTimeout(() => {
 										element.setPayPage(3)
 										element.setGetPayInfo(element.getpayinfo)
-									}, random);
+									}, randoms);
 									
 								}
 								else {
-									console.log(random)
 									element.setPayPage(5)
 									setTimeout(() => {
 										element.setPayPage(4)
-									}, random);
+									}, randoms);
 								}})}
 					}}>
 						{item}

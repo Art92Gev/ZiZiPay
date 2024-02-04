@@ -14,6 +14,7 @@ export default function Backbtn() {
 				element.setGap('1.5rem');
 				element.setImg()
 				element.setInputValue('0')
+				element.setHaz('0')
 			}}
 		>
 			Back

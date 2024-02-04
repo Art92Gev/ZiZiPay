@@ -10,18 +10,17 @@ import Backbtn from './Backbtn';
 
 export default function Paypage() {
 	const element = useContext(Context);
-	const [inputValue, setInputValue] = useState('0');
-
+	let random = Math.round(Math.random() * (5 * 1000 ))
 	const padnum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'Del', 'Pay'];
 
 	const handleButtonClick = (value) => {
-		if (inputValue.length < 9) {
-			setInputValue((prevValue) => prevValue + value);
+		if (element.inputValue.length < 9) {
+			element.setInputValue((prevValue) => prevValue + value);
 		}
 	};
 
 	const handleXButtonClick = () => {
-		setInputValue((prevValue) => prevValue.slice(0, -1));
+		element.setInputValue(element.inputValue.slice(0, -1));
 	};
 
 	return (
@@ -31,25 +30,33 @@ export default function Paypage() {
 			<div className='button-pad'>
 				<input
 					type="text"
-					value={inputValue}
+					value={element.inputValue}
 					readOnly
-				/>
+					/>
 				{padnum.map((item, index) => (
 					<button key={index} onClick={() => {
 						if (item !== 'Del' && item !== 'Pay') {
 							handleButtonClick(item)
 						}
-						else if (inputValue.length > 1 && item !== 'Pay') {
+						else if (element.inputValue.length > 1 && item !== 'Pay') {
 							handleXButtonClick()
 						}
-						else if (item === 'Pay') {
+						else if (item === 'Pay' && element.inputValue.length === 9) {
 							data.map((item, index) => {
-								if (inputValue.includes(item.number)) {
-									element.setGetPayInfo(element.getpayinfo)
-									element.setPayPage(3)
+								if (element.inputValue.includes(item.number)) {
+									element.setPayPage(5)
+									setTimeout(() => {
+										element.setPayPage(3)
+										element.setGetPayInfo(element.getpayinfo)
+									}, random);
+									
 								}
 								else {
-									element.setPayPage(4)
+									console.log(random)
+									element.setPayPage(5)
+									setTimeout(() => {
+										element.setPayPage(4)
+									}, random);
 								}})}
 					}}>
 						{item}

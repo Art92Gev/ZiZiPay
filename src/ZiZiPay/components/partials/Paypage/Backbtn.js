@@ -13,6 +13,7 @@ export default function Backbtn() {
 				element.setPayPage(1);
 				element.setGap('1.5rem');
 				element.setImg()
+				element.setInputValue('0')
 			}}
 		>
 			Back

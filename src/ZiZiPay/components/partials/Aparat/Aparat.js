@@ -8,6 +8,7 @@ import { useContext } from 'react'
 import Paypage from '../Paypage/Paypage'
 import Paytrue from '../truefalsepage/Paytrue'
 import Payfalse from '../truefalsepage/Payfalse'
+import Loading from '../truefalsepage/Loading'
 
 export default function Aparat() {
 	const element = useContext(Context)
@@ -21,7 +22,8 @@ export default function Aparat() {
 					{element.paypage === 1 ? (<Main />)
 						: element.paypage === 2 ? (<Paypage />)
 							: element.paypage === 3 ? (<Paytrue />)
-								: element.paypage === 4 ? (<Payfalse />) : null}
+								: element.paypage === 4 ? (<Payfalse />)
+									: element.paypage === 5 ? <Loading /> : null}
 					<Footer />
 				</div>
 			</div>

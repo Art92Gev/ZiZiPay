@@ -84,3 +84,12 @@
 	font-size: 30px;
 	color: white;
 }
+
+.loading {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #82BC00;
+}

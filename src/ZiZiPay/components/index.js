@@ -10,13 +10,15 @@ function ZiZiPay() {
 	const [getpayinfo,setGetPayInfo] = useState()
 	const [gap, setGap] = useState('1.5rem')
 	const [img, setImg] = useState()
+	const [inputValue, setInputValue] = useState('0');
 	let element = {
 		paypage, setPayPage,
 		paypage1, setPayPage1,
 		visible, setVisible,
 		gap, setGap,
 		img, setImg,
-		getpayinfo,setGetPayInfo
+		getpayinfo,setGetPayInfo,
+		inputValue, setInputValue
 	}
 
 	return (

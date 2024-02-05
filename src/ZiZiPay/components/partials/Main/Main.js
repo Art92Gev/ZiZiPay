@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Main.css'
 import Context from '../../Context'
 import { useContext } from 'react'
@@ -7,7 +7,6 @@ import { icons2 } from './../../constants/icons';
 
 export default function Main() {
   const element = useContext(Context)
-
 
   return (
     <main>

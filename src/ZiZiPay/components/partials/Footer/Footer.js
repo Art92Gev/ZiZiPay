@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Footer.css'
 import Context from '../../Context'
 import { useContext } from 'react'

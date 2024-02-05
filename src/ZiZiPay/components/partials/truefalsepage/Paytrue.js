@@ -7,10 +7,6 @@ import { useContext } from 'react';
 const random = Math.round(Math.random() * 10000);
 export default function Paytrue() {
 	const element = useContext(Context);
-  let cashin;
-  let comision;
-  let payatall;
-
   return (
     <div className='paytrue'>
       <div className='user-info'>

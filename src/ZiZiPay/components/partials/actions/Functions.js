@@ -1,6 +1,7 @@
 import { data } from '../../constants/data';
 
 const padFunctions = (item, element, randoms, handleButtonClick, handleXButtonClick) => {
+	
   if (item !== 'Del' && item !== 'Pay') {
     handleButtonClick(item);
   } else if (element.inputValue.length > 1 && item !== 'Pay') {

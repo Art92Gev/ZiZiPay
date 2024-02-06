@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './styles/index.css'
 import Context from "./Context";
 import Aparat from './partials/Aparat/Aparat'
+import { BrowserRouter } from "react-router-dom";
+
 
 function ZiZiPay() {
 	const [visible, setVisible] = useState('block')
@@ -26,7 +28,9 @@ function ZiZiPay() {
 	return (
 		<Context.Provider value={element}>
 			<div className="zizi-pay">
+				<BrowserRouter>
 				<Aparat />
+				</BrowserRouter>
 			</div>
 		</Context.Provider>
 	)

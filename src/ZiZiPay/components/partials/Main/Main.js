@@ -4,9 +4,12 @@ import Context from '../../Context'
 import { useContext } from 'react'
 import { icons1 } from './../../constants/icons2'
 import { icons2 } from './../../constants/icons';
+import { useNavigate } from 'react-router-dom'
+
 
 export default function Main() {
   const element = useContext(Context)
+	const navigate = useNavigate()
 
   return (
     <main>
@@ -22,6 +25,7 @@ export default function Main() {
       <div className='main-2'>
         {icons2.map((item, index) => (
           <button style={{ backgroundImage: `url(${item.icon})` }} key={index} onClick={() => {
+						navigate('/Paypage')
             element.setGetPayInfo(item);
             element.setVisible('none');
             element.setGap('0');

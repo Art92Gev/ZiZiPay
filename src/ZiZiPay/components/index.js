@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 
 
 function ZiZiPay() {
-	const [getpayinfo,setGetPayInfo] = useState()
 	const [img, setImg] = useState()
 	const [inputValue, setInputValue] = useState('0');
 	const [haz, setHaz] = useState(null)

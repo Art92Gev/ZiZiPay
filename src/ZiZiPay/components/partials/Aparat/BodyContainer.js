@@ -13,7 +13,6 @@ export default function BodyContainer() {
 	let arrpox = [hazar, hing, tas, qsan]
 	return (
 		<div className='body-container'>
-			<div className='coin'></div>
 			<div className='cashcode' style={{ background: location.pathname === '/Paytrue' ? '#26a709' : '#e40909d4', transition: '1s' }}>
 				<hr />
 			</div>

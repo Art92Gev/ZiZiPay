@@ -29,9 +29,9 @@ export default function Paypage() {
 			<Header />
 			<div className='paypage-container'>
 				<img src={img} alt="" />
-				<hr />
+				<hr/>
 				<div className='button-pad'>
-					<input
+					<input style={{borderBottom : element.inputValue.length ===  9 ? ' #98BD36 3px solid' : ' rgb(188, 127, 13) 2px solid'}}
 						type="text"
 						value={element.inputValue}
 						readOnly

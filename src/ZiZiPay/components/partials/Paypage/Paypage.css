@@ -41,10 +41,10 @@
 .button-pad> input {
 	width: 96%;
 	height: 10%;
-	/* appearance: none; */
 	border: none;
 	background: transparent;
-	border-bottom: rgb(188, 127, 13) 2px solid;
+	transition: .5s;
+	border-bottom: rgb(3, 204, 137) 2px solid;
 }
 .button-pad>button {
 	width: 30%;

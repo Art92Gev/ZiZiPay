@@ -26,8 +26,7 @@ export default function Main() {
 			<div className='main-2'>
 				{icons2.map((item, index) => (
 					<button style={{ backgroundImage: `url(${item.icon})` }} key={index} onClick={() => {
-						navigate('/Paypage')
-						element.setGetPayInfo(item);
+						navigate('/Paypage');
 						element.setImg(item.icon);
 					}}></button>
 				))}

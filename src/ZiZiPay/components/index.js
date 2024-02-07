@@ -11,7 +11,6 @@ function ZiZiPay() {
 	const [haz, setHaz] = useState(null)
 	let element = {
 		img, setImg,
-		getpayinfo,setGetPayInfo,
 		inputValue, setInputValue,
 		haz,setHaz
 	}

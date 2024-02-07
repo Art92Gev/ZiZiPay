@@ -12,14 +12,10 @@ export default function Backbtn() {
 			className='back'
 			onClick={() => {
 				navigate('/')
-				element.setVisible('block');
-				element.setPayPage(1);
-				element.setGap('1.5rem');
 				element.setImg()
 				element.setInputValue('0')
 				element.setHaz('0')
-			}}
-		>
+			}}>
 			Back
 		</button>
 	)

@@ -4,19 +4,23 @@ import headerVideo from '../images/1.mp4'
 import { TfiSearch } from "react-icons/tfi";
 import Context from '../../Context';
 import { useContext } from 'react';
+import { useLocation } from 'react-router-dom'
+
 
 export default function Header() {
 	const element = useContext(Context);
+	const location = useLocation();
+
 	return (
-		<header style={{ display: element.paypage === 4 || element.paypage === 5 ? 'none' : null }}>
-			<div className='icon-logo' style={{ width: element.paypage === 4 ? '0' : '17%' }}>
-				{element.paypage === 1 || element.img === undefined ?
+		<header>
+			<div className='icon-logo'>
+				{location.pathname === '/' ?
 					(
 						<video autoPlay loop muted playsInline>
 							<source src={headerVideo} type="video/mp4" />
 						</video>
 					)
-					: (element.paypage === 2 || element.paypage === 3) &&
+					:
 					(
 						<img src={element.img} alt="" />
 					)

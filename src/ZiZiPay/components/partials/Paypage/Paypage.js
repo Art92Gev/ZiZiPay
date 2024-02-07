@@ -3,9 +3,9 @@ import Context from '../../Context';
 import './Paypage.css';
 import img from '../images/3.jpg';
 import Backbtn from './Backbtn';
-import { padFunctions } from '../actions/Functions';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { data } from '../../constants/data';
+import Header from './../Header/Header';
 
 
 export default function Paypage() {
@@ -26,42 +26,42 @@ export default function Paypage() {
 
 	return (
 		<div className='paypage'>
-			<img src={img} alt="" />
-			<hr />
-			<div className='button-pad'>
-				<input
-					type="text"
-					value={element.inputValue}
-					readOnly
-				/>
-				{padnum.map((item, index) => (
-					<button key={index} onClick={() => {
-						if (item !== 'Del' && item !== 'Pay') {
-							handleButtonClick(item);
-						} else if (element.inputValue.length > 1 && item !== 'Pay') {
-							handleXButtonClick();
-						} else if (item === 'Pay' && element.inputValue.length === 9) {
-							navigate('/Loading')
-							alert('True number is : 043996633')
-							data.forEach((item, index) => {
-								if (element.inputValue.includes(item.number)) {
-									element.setPayPage(5);
-									setTimeout(() => {
-										navigate('/Paytrue')
-										element.setGetPayInfo(element.getpayinfo);
-									}, randoms);
-								} else {
-									element.setPayPage(5);
-									setTimeout(() => {
-										navigate('/Payfalse')
-									}, randoms);
-								}
-							});
-						}
-					}}>
-						{item}
-					</button>
-				))}
+			<Header />
+			<div className='paypage-container'>
+				<img src={img} alt="" />
+				<hr />
+				<div className='button-pad'>
+					<input
+						type="text"
+						value={element.inputValue}
+						readOnly
+					/>
+					{padnum.map((item, index) => (
+						<button key={index} onClick={() => {
+							if (item !== 'Del' && item !== 'Pay') {
+								handleButtonClick(item);
+							} else if (element.inputValue.length > 1 && item !== 'Pay') {
+								handleXButtonClick();
+							} else if (item === 'Pay' && element.inputValue.length === 9) {
+								navigate('/Loading')
+								alert('True number is : 043996633')
+								data.forEach((item, index) => {
+									if (element.inputValue.includes(item.number)) {
+										setTimeout(() => {
+											navigate('/Paytrue')
+										}, randoms);
+									} else {
+										setTimeout(() => {
+											navigate('/Payfalse')
+										}, randoms);
+									}
+								});
+							}
+						}}>
+							{item}
+						</button>
+					))}
+				</div>
 			</div>
 			<Backbtn />
 		</div>

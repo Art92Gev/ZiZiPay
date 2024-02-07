@@ -1,13 +1,23 @@
 .paypage {
 	width: 100%;
-	height: 200%;
+	height: 100%;
 	background: #bcb8b8;
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: column;
 	align-items: center;
 	position: relative;
 	top: 0%;
 }
+.paypage-container{
+	width: 100%;
+	height: 83%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+
 
 .button-pad {
 	width: 26%;
@@ -77,17 +87,16 @@
 
 
 
-.paypage > img {
+.paypage-container > img {
 	width: 55%;
-	position: absolute;
-	left: 1%;
-	top: 7%;
+	align-self: self-start;
+	margin-top: 1rem;
 }
 
-.paypage > hr {
-	width: 55%;
+.paypage-container > hr {
+	width: 60%;
 	position: absolute;
 	left: 1%;
-	top: 60%;
+	top: 65%;
 	border: 1px solid rgba(28, 27, 27, 0.552);
 }

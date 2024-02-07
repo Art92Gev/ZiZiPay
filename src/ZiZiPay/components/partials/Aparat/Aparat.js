@@ -8,12 +8,11 @@ import BodyContainer from './BodyContainer'
 export default function Aparat() {
 	const element = useContext(Context)
 	useEffect(() => {
-		console.log(element.haz); // Log the updated value after each render
 	}, [element.haz]);
 	return (
 		<div className='aparat'>
-			<HeadContainer/>
-			<BodyContainer/>
+			<HeadContainer />
+			<BodyContainer />
 		</div>
 	)
 }
